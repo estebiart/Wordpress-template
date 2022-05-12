@@ -9,15 +9,24 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
     <title>Factor Tek</title>
 </head>
-
+<style>
+    .banner{
+        background-image: url("./assets/img/banner rentek.jpg");
+ background-color: #022658;
+ background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top left;
+    }
+</style>
 <body>
     <header class="encabezado">
-        <div class="container-fluid gx-5 py-3" style="background-color:blue; height: 70px;;" >
+        <div class="container-fluid gx-5 py-3" style=" height: 90px;background-color: #022658;" > 
             <div class="row">
                 <div class="encabezado__hamburguesa col-2" >
                     <a href="#">
@@ -47,9 +56,9 @@
                         <img src="./assets/img/icon-menu.svg" alt="menu icon">
                     </a>
                 </div>
-                <div class="enbezado__logo col-2 col-md-2 px-2 px-md-4">
+                <div class="enbezado__logo col-3 col-md-2 px-2 px-md-4">
                     <a href="/">
-                        <img src="./assets/img/zyro-image.png" width="100%" >
+                        <img src="./assets/img/logo.png"  >
                     </a>
                 </div>
                 <div class="encabezado__menu-responsive col-10">
@@ -73,48 +82,94 @@
     <main class="productos">
         <div class="container-fluid gx-5">
 
-<div class="banner">
-        <div class="col-6">
-             <h1> Built by truckers
-             </h1>
-             <p> Factortek takes the extra mile 
-             </p>
-        </div>
-        <div class="col-6">
-            <form action="" method="get">
 
-            </form>
+<div class="container banner" >
+    <div class="row">
+
+        <div class="col-sm-6">
+
+                <h1> Built by truckers
+                </h1>
+                <p> Factortek takes the extra mile 
+                </p>
+
+
+        </div>
+        <div class="col-sm-6">
+            <form id="form" action="./solicita_pedido.html" method="post" >
+                <br> <div>
+                <label for="p1" style="margin-top: 30px;" id="label1">Nombre del cliente</label> 
+                 <input type="text" name="p1" id="p1" style="margin: 10px;"> </div>
+                <br> <div><label for="p2" id="label2">Apellidos del cliente</label> 
+                     <input type="text" name="p2" id="p2" style="margin: 10px;"> </div>
+                <br> <div><label for="">Fecha</label> 
+                     <input type="date" name="" id=""style="margin: 10px;"> </div>
+                <br> <div><label for="">Número</label> 
+                     <input type="number" name="" id="" style="margin: 10px;"> </div>
+                <br> <div><label for="">Dirreción</label> 
+                     <input type="text" name="" id="" style="margin: 10px; margin-bottom: 50px;"> </div>
+                <br>
+
+
+                <input type="submit" value="Enviar" style="margin: 20px;">
+    
+            </form >
+
         </div>
 </div>
-<div class="">
-    <h2> dont let</h2>
-    <p> turn your</p>
-    <div class="container">
-        <div class="col-6 card">
-            <div class="col-6">
-                <img src="./assets/img/zyro-image (1).png" alt="">
-            </div>
-            <div class="col-6">
-                <h3>funding</h3>
-                <ul>
-                    <li>ivoice</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-6 card">
-            <div class="col-6">
-                <img src="./assets/img/zyro-image (1).png" alt="">
-            </div>
-            <div class="col-6">
-                <h3>funding</h3>
-                <ul>
-                    <li>ivoice</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<div>
-
 </div>
+<div class="container">
+    <div class="row">
+        <h2> dont let</h2>
+        <p> turn your</p>
+        <div class="col-sm-6">
+            <div class="card">
+            <div class="card-body">
+                <div class="col-6">
+                    <img src="./assets/img/icono1.png" alt="">
+                </div>
+                <div class="col-6">
+                    <h3>funding</h3>
+                    <ul>
+                        <li>ivoice</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+            <div class="card-body">
+                <div class="col-6">
+                    <img src="./assets/img/icono2.png" alt="">
+                </div>
+                <div class="col-6">
+                    <h3>funding</h3>
+                    <ul>
+                        <li>ivoice</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+
+<script>
+    
+$("form").submit(function(e){
+
+if($("#p1").text()=="" ){
+    $("#label1").css("color","red");
+    event.preventDefault();
+}
+if($("#p2").text()=="" ){
+    $("#label2").css("color","red");
+    event.preventDefault();
+}
+
+});
+</script>
 
             
